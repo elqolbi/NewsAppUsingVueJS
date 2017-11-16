@@ -12,8 +12,8 @@
             <div v-if="source">
                 <h6>{{ source.description }}</h6>
                 <a v-bind:href="source.url" class="btn btn-primary" target="_blank">Go To {{ source.name }} Website</a>
-                <a href="#/mediadata" class="btn btn-success pull-right">Show Data</a>
-                <a href="#" class="btn btn-warning pull-right">Show All</a>
+                <router-link to="/mediadata" tag="a" class="btn btn-success pull-right">Show Data</router-link>
+                <router-link to="/" tag="a" class="btn btn-warning pull-right">Show All</router-link>
             </div>
         </div>
     </div>
