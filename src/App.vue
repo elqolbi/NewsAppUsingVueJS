@@ -1,19 +1,17 @@
 <template>
   <div class="cointainer" id="app">
     <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
-    <Newslist v-bind:source="source"></Newslist>
+    <router-view v-bind:source="source"></router-view>
   </div>
 </template>
 
 <script>
 import SourceSelection from './components/SourceSelection'
-import Newslist from './components/Newslist'
 
 export default {
   name: 'app',
   components: {
-    SourceSelection,
-    Newslist
+    SourceSelection
   },
   data () {
     return {
