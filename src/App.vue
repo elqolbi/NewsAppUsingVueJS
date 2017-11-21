@@ -1,8 +1,10 @@
 <template>
-  <div class="cointainer" id="app">
-    <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
-    <router-view v-bind:source="source"></router-view>
-  </div>
+  <Row id="app">
+    <Col span="24">
+      <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
+      <router-view v-bind:source="source"></router-view>
+    </Col>
+  </Row>
 </template>
 
 <script>
